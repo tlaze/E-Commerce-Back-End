@@ -5,9 +5,11 @@ const { Tag, Product, ProductTag } = require('../../models');
 
 router.get('/', async (req, res) => {
   // find all tags
-  // be sure to include its associated Product data
   try{ 
-    const findAllTags = await Tag.findAll();
+    const findAllTags = await Tag.findAll({
+      // be sure to include its associated Product data
+      include: [{ model: ProductTag, through: Product, as: 'product_alias'}]
+    });
     res.status(200).json(findAllTags);
   }catch (err) {
     res.status(500).json(err);
@@ -16,10 +18,10 @@ router.get('/', async (req, res) => {
 
 router.get('/:id', async (req, res) => {
   // find a single tag by its `id`
-  // be sure to include its associated Product data
   try{
     const findOneTag = await Tag.findByPk(req.params.id, {
-      include: [{ model: ProductTag, through: Tag, as: 'tag_alias'}]
+      // be sure to include its associated Product data
+      include: [{ model: ProductTag, through: Product, as: 'product_alias'}]
     });
     if(!findOneTag){
       res.status(404).json({ message: 'Tag Not Found With This ID!'})
@@ -36,11 +38,11 @@ router.post('/', (req, res) => {
   Tag.create(req.body)
   .then((tag) => {
     // if there's product tags, we need to create pairings to bulk create in the ProductTag model
-    if (req.body.productIds.length) {
-      const productTagIdArr = req.body.productIds.map((product_id) => {
+    if (req.body.tagIds.length) {
+      const productTagIdArr = req.body.tagIds.map((tag_id) => {
         return {
-          tag_id: tag.id,
-          product_id,
+          product_id: product.id,
+          tag_id,
         };
       });
       return ProductTag.bulkCreate(productTagIdArr);
