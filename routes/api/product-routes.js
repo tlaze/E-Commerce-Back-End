@@ -10,8 +10,15 @@ router.get('/', async (req, res) => {
     const findAllProducts = await Product.findAll({
       // be sure to include its associated Category and Tag data
       include: [
-        { model: ProductTag, through: Product, as: 'product_alias'},
-        { model: ProductTag, through: Tag, as: 'tag_alias'}]
+        { 
+          model: Category,
+          attributes: ['product_alias']
+        },
+        { 
+          model: Tag,
+          attributes: ['tag_alias']
+        }
+        ]
     });
     res.status(200).json(findAllProducts);
   }catch (err) {
@@ -24,11 +31,19 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   // find a single product by its `id`
   try{
-    const findOneProduct = await Product.findByPk(req.params.id, {
+    const findOneProduct = await Product.findOne(req.params.id, {
       // be sure to include its associated Category and Tag data
+      attributes: ['id', 'product_name', 'price', 'stock'],
       include: [
-        { model: ProductTag, through: Product, as: 'product_alias'},
-        { model: ProductTag, through: Tag, as: 'tag_alias'}]
+        { 
+          model: Category,
+          attributes: ['product_alias']
+        },
+        { 
+          model: Tag, 
+          attributes: ['tag_alias']
+        }
+      ]
     });
     if(!findOneProduct){
       res.status(404).json({ message: 'Product Not Found With This ID!'})
