@@ -78,7 +78,7 @@
 
   If you have any questions, comments, or issues feel free to contact Tom directly through
   
-  email: Lazore
+  email: tomlazore@gmail.com
 
   or check out my [GitHub](https://github.com/tlaze)
 
