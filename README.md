@@ -82,7 +82,7 @@
 
   If you have any questions, comments, or issues feel free to contact Tom directly through
   
-  [Email](tomlazore@gmail.com)
+  Email: tomlazore@gmail.com
 
   or check out my [GitHub](https://github.com/tlaze)
 
