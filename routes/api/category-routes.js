@@ -19,8 +19,8 @@ router.get('/', (req, res) => {
   });
 });
 
+// find one category by its `id` value
 router.get('/:id', (req, res) => {
-  // find one category by its `id` value
   Category.findOne(
     {
       where: {
@@ -39,8 +39,8 @@ router.get('/:id', (req, res) => {
   });
 });
 
+// create a new category
 router.post('/', (req, res) => {
-  // create a new category
   Category.create({
     category_name: req.body.category_name
   })
