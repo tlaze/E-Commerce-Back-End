@@ -31,12 +31,21 @@
   
   ## Installation
 
-  To run this application properly, you need to install * Node.js  *  MySQL2  *  Express.js  *  Sequelize  * Insomnia (For Testing Purposes)  * dotenv
+  To run this application properly, you need to install
+  *  Node.js  
+  *  MySQL2  
+  *  Express.js 
+  *  Sequelize  
+  *  Insomnia (For Testing Purposes)  
+  *  otenv
   
 
   ## Usage
   
-  *  Clone the repository and navigate to the project folder in the Command Line  *  Enter the command: npm install  *  Optional (For preset values): Enter the command: npm run seeds  * Enter the command: npm start
+  *  Clone the repository and navigate to the project folder in the Command Line  
+  *  Enter the command: npm install  
+  *  Optional (For preset values): Enter the command: npm run seeds  
+  *  Enter the command: npm start
   
   
   ## License
