@@ -37,7 +37,7 @@
   *  Express.js 
   *  Sequelize  
   *  Insomnia (For Testing Purposes)  
-  *  otenv
+  *  dotenv
   
 
   ## Usage
