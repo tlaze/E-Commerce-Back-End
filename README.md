@@ -73,7 +73,7 @@
 
   Live application: No Live Application For This Project
 
-  Project Repository: https://github.com/tlaze/E-Commerce-Back-End
+  Project Repository: https://github.com/tlaze/E-Commerce-Backend
   
   Video Walkthrough: https://drive.google.com/file/d/1SikFFZC16quQW8LNXuVtw8WN4cUksFDg/view?usp=sharing
   
