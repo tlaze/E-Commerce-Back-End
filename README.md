@@ -80,7 +80,7 @@
   
   ## Questions
 
-  If you have any questions, comments, or issues feel free to contact Tom directly through
+  If you have any questions, comments, or issues feel free to contact Tom Lazore directly through
   
   Email: tomlazore@gmail.com
 
