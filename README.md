@@ -43,9 +43,13 @@
   ## Usage
   
   *  Clone the repository and navigate to the project folder in the Command Line  
-  *  Enter the command: npm install  
-  *  Optional (For preset values): Enter the command: npm run seeds  
-  *  Enter the command: npm start
+  *  Run MySQL with the command: mysql -u root -p
+  *  Enter password
+  *  Enter Command: db/schema.sql;
+  *  Enter Command: quit;
+  *  Enter Command: npm install  
+  *  Optional (For preset values): Enter Command: npm run seeds  
+  *  Enter Command: npm start
   
   
   ## License
