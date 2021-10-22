@@ -12,11 +12,11 @@ router.get('/', async (req, res) => {
       include: [
         { 
           model: Category,
-          attributes: ['product_alias']
+          attributes: ['product_name']
         },
         { 
           model: Tag,
-          attributes: ['tag_alias']
+          attributes: ['tag_name']
         }
         ]
     });
@@ -37,11 +37,11 @@ router.get('/:id', async (req, res) => {
       include: [
         { 
           model: Category,
-          attributes: ['product_alias']
+          attributes: ['product_name']
         },
         { 
           model: Tag, 
-          attributes: ['tag_alias']
+          attributes: ['tag_name']
         }
       ]
     });
