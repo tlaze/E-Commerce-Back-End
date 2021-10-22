@@ -22,22 +22,21 @@ router.get('/', (req, res) => {
 router.get('/:id', async (req, res) => {
   // find one category by its `id` value
   // be sure to include its associated Products
-  try{
-    const findOneCategory = await Category.findOne(req.params.id, {
-      // be sure to include its associated Category and Tag data
-      include: { 
-        model: Product,  
-        attributes: ['catagory_id']
+  Category.findOne(
+    {
+      where: {
+        id: req.params.id
+      },
+      include: {
+        model: Product,
+        attributes: ['category_id']
       }
-    });
-    if(!findOneCategory){
-      res.status(404).json({ message: 'Category Not Found With This ID!'})
-      return;
     }
-    res.status(200).json(findOneCategory);
-  }catch (err) {
+  )
+  .then(data => res.json(data))
+  .catch(err => {
     res.status(500).json(err);
-  }
+  });
 });
 
 router.post('/', (req, res) => {
