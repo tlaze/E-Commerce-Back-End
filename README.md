@@ -75,7 +75,7 @@
 
   [Project Repository](https://github.com/tlaze/E-Commerce-Backend)
   
-  [Video Walkthrough](https://drive.google.com/file/d/1SikFFZC16quQW8LNXuVtw8WN4cUksFDg/view?usp=sharing)
+  [Video Walkthrough](https://drive.google.com/file/d/1wjuSyfh78GBak2BMvQl8KWsAblSFl0H5/view)
   
   
   ## Questions
