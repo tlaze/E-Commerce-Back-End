@@ -63,7 +63,7 @@
   
   ## Tests
   
-  No Tests Availiable Currently in the command line
+  No Tests Availiable Currently
 
   ## ScreenShot
 
