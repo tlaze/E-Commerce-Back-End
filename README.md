@@ -57,8 +57,6 @@
   This Project is licensed by [MIT](https://choosealicense.com/licenses/mit/).
   
   ## Contributors
-  
-  The following helped make this project possible:
 
   Tom Lazore - Contact Info Below
   
